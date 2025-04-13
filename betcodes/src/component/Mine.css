@@ -1,0 +1,156 @@
+/* General Page Styling */
+body {
+  background-color: #131A24;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 150vh;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #0F141A;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mine Settings (Blast Mine Selection) */
+.mine-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #19232D;
+  padding: 15px;
+  border-radius: 8px;
+  width: 220px;
+}
+
+.mine-settings label {
+  color: #8A99A8;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.mine-settings select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0E161D;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  background-color: #19232D;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Individual Mines */
+.mine {
+  width: 60px;
+  height: 60px;
+  background-color: #22303C;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8A99A8;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.mine:hover {
+  background-color: #2A3B47;
+}
+
+/* Mine States */
+.mine-active {
+  background-color: #afc8f8a9; /* Red for active mines */
+  color: white;
+}
+
+/* Revealed Cells */
+.mine-revealed {
+  background-color: #1D2A35;
+  color: white;
+}
+
+/* Different Mine Types */
+.mine:has(> .blast-mine) {
+  background-color: #FF0000; /* Bright red for blast mine */
+}
+
+.mine:has(> .safe-mine) {
+  background-color: #1AD16E; /* Green for safe cell */
+}
+
+/* Restart Button */
+.reset-btn {
+  background-color: #1AD16E;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: #17B85F;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(5, 50px);
+      gap: 5px;
+  }
+
+  .mine {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+  }
+
+  .mine-settings {
+      width: 180px;
+  }
+}
+.amount {
+  display: flex;
+  margin: 4px;
+  background-color: #0F141A;
+  border: 0px;
+  height: 30px;
+  width: 100%;
+  color: #e3e9ee;
+}
+.profit-container{
+  background-color: #0F141A;
+  padding: 4px;
+  margin: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.profit{
+  color: #f2f3f5;
+}
